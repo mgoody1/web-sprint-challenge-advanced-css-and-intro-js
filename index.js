@@ -230,9 +230,11 @@ console.log(artists[8].name);
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+ function getArtistByIndex(array, index) {
+  return `the artist at index ${index} is ${array[index].name}`
+
 }  
+console.log(getArtistByIndex(artists, 2)); 
 
 
 
@@ -244,9 +246,17 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
-}
+function get20s(array){
+  const lifeSpan = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].years[1] === '9' && array[i].years[0] === '1'  ) {
+      lifeSpan.push(array[i].name);
+    }
+  }return lifeSpan;
+  
+}    
+
+console.log(get20s(artists));
 
 
 
